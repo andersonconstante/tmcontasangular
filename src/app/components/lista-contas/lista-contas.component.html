@@ -1,0 +1,44 @@
+<div class="list row">
+
+    <div class="col-md-6">
+      <h4>Lista de Contas</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let conta of contas; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveConta(conta, i)"
+        >
+          {{ conta.nomeCliente }}
+        </li>
+      </ul>
+          </div>
+    <div class="col-md-6">
+      <div *ngIf="currentConta">
+        <h4>Conta</h4>
+        <div>
+          <label><strong>Nome do Cliente:</strong></label> {{ currentConta.nomeCliente }}
+        </div>
+        <div>
+          <label><strong>Nome do Banco:</strong></label>
+          {{ currentConta.nomeBanco }}
+        </div>
+        <div>
+            <label><strong>Numero do Banco:</strong></label>
+            {{ currentConta.numeroBanco }}
+        </div>
+        <div>
+            <label><strong>Numero da Agencia:</strong></label>
+            {{ currentConta.numeroAgencia }}
+        </div>
+        <div>
+            <label><strong>Numero da Conta:</strong></label>
+            {{ currentConta.numeroConta }}
+        </div>
+      </div>
+      <div *ngIf="!currentConta">
+        <br />
+        <p>Escolha uma Conta Por favor!</p>
+      </div>
+    </div>
+  </div>

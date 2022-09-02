@@ -1,0 +1,52 @@
+<div class="list row">
+
+    <div class="col-md-6">
+      <h4>Lista de Transacoes</h4>
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let transacao of transacoes; let i = index"
+          [class.active]="i == currentIndex"
+          (click)="setActiveConta(transacao, i)"
+        >
+          {{ transacao.contaOrigem.nomeCliente }}
+        </li>
+      </ul>
+          </div>
+    <div class="col-md-6">
+      <div *ngIf="currentTransacao">
+        <h4>Detalhes da Transacao</h4>
+        <div>
+          <label><strong>Conta Origem:</strong></label> {{ currentTransacao.contaOrigem.nomeCliente }}
+        </div>
+        <div>
+          <label><strong>Conta Destino:</strong></label>
+          {{ currentTransacao.contaDestino.nomeCliente }}
+        </div>
+        <div>
+            <label><strong>Valor da Transferencia:</strong></label>
+            {{ currentTransacao.valorTransferencia }}
+        </div>
+        <div>
+            <label><strong>Taxa:</strong></label>
+            {{ currentTransacao.taxa }}
+        </div>
+        <div>
+            <label><strong>Data do Agendamento:</strong></label>
+            {{ currentTransacao.dataGendamento }}
+        </div>
+        <div>
+            <label><strong>Data da Transferencia:</strong></label>
+            {{ currentTransacao.dataTransferencia }}
+        </div>
+        <div>
+            <label><strong>Tipo da Transação:</strong></label>
+            {{ currentTransacao.tipo }}
+        </div>
+      </div>
+      <div *ngIf="!currentTransacao">
+        <br />
+        <p>Escolha uma Transação Por favor!</p>
+      </div>
+    </div>
+  </div>

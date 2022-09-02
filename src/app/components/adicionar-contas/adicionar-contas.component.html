@@ -1,0 +1,68 @@
+<div class="submit-form">
+    <div *ngIf="!submitted">
+      <div class="form-group">
+        <label for="id">Nome do cliente</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nomeCliente"
+          required
+          [(ngModel)]="conta.nomeCliente"
+          name="nomeCliente"
+        />
+      </div>
+      <div class="form-group">
+        
+        <label for="nomeBanco">Nome do Banco</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nomeBanco"
+          required
+          [(ngModel)]="conta.nomeBanco"
+          name="nomeBanco"
+        />
+      </div>
+        <div class="form-group">
+            <label for="numeroBanco">Numero do Banco</label>
+            <input
+            type="number"
+            [minLength]="1"
+              class="form-control"
+              id="numeroBanco"
+              required
+              [(ngModel)]="conta.numeroBanco"
+              name="numeroBanco"
+            />
+        </div>
+        <div class="form-group">
+            <label for="numeroAgencia">Numero da Agencia</label>
+            <input
+            type="number"
+            [minLength]="1"
+              class="form-control"
+              id="numeroAgencia"
+              required
+              [(ngModel)]="conta.numeroAgencia"
+              name="numeroAgencia"
+            />
+        </div>
+        <div class="form-group">
+            <label for="numeroConta">Numero da Conta</label>
+            <input
+            type="number"
+            [minLength]="1"
+              class="form-control"
+              id="numeroConta"
+              required
+              [(ngModel)]="conta.numeroConta"
+              name="numeroConta"
+            />
+        </div>
+      
+      <button (click)="saveConta()" class="btn btn-success">Submit</button>
+    </div>
+    <div *ngIf="submitted">
+      <h4>Conta Criada com Sucesso!</h4>
+        </div>
+  </div>

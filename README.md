@@ -1,27 +1,42 @@
 # TmContas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
+Projeto Criado usando [Angular CLI](https://github.com/angular/angular-cli) version 14.2.1.
 
-## Development server
+Pode ser aceesado através de [Github Pages](https://github.com/andersonconstante/tmcontasangular).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Escopo
 
-## Code scaffolding
+Criar um projeto Angular 8,  com as seguintes funcionalidades:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Construir a estrutura do projeto utilizando o npm (gerenciador de pacotes do Node.js);
+- Criar uma pagina de cadastro de Contas com os campos nomeCliente, nomeBanco, numeroBanco, numeroAgencia, numeroConta",
+- Criar uma funcionalidade de listar as contas criadas,
+- Criar uma funcionalidade de transação entre duas contas, com os campos contaOrigem, contaDestino, valorTransferencia, taxa, dataGendamento, dataTransferencia, tipo e com a finalidade de agendar e aplicando taxas de acordo com o período, tipo de trançação ou valor,
+- Criar uma funcionalidade de listar as transações com a o nome do cliente da contaOrigem sendo  exibido em cada transação que ele realizou,
+- Criar a rota linkando uma página a outra (Adicionar Pessoa e Listar Pessoa);
+- Implementar o consumo da API disponibilizadas, através dos endpoints:
+	- API de Listagem
+	- API de Cadastro
 
-## Build
+## Tecnologias
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Angular: 14.2.0
+- Angular CLI: 14.2.1
+- typescript 4.7.4
+- Node.js 16.17.0
+- rxjs 4.7.4
+- Package Manager: npm 8.15.0
 
-## Running unit tests
+## Como instalar
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Baixe ou clone este repositório usando `git clone https://github.com/andersonconstante/tmcontasangular.git`;
+- Dentro do diretório, instale as dependências usando `npm install`.
 
-## Running end-to-end tests
+## Como executar
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Execute `ng serve` para executar a versão de desenvolvimento. Depois acesse `http://localhost:4200/`.
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+## Dúvidas
+Caso haja alguma dúvida em relação a este repositório, envie para andersonwconsul@gmail.com
